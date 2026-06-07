@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Ranjan S | Data Science Portfolio</title>
 
-    <!-- Google Fonts: Poppins + Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -64,7 +63,7 @@
             border-radius: 10px;
         }
 
-        /* Header & Nav - fixed mobile issues */
+        /* Header - Fixed for mobile */
         .header {
             position: sticky;
             top: 0;
@@ -97,7 +96,6 @@
             letter-spacing: -0.3px;
             white-space: nowrap;
         }
-        /* Desktop nav links */
         .nav-links {
             display: flex;
             gap: 1.5rem;
@@ -113,7 +111,6 @@
         .nav-links a:hover, .nav-links a.active-nav {
             color: var(--accent);
         }
-        /* Mobile menu button (hamburger) */
         .mobile-menu-btn {
             display: none;
             background: transparent;
@@ -129,7 +126,6 @@
             background: var(--accent);
             color: white;
         }
-        /* Mobile nav drawer */
         .mobile-nav {
             position: fixed;
             top: 0;
@@ -193,7 +189,6 @@
             color: var(--text-color);
         }
 
-        /* Hero, Sections, etc */
         .hero {
             max-width: 1280px;
             margin: 2rem auto 3rem;
@@ -221,6 +216,9 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
         }
         .primary-btn { background: var(--accent); color: white; box-shadow: 0 4px 10px rgba(59,130,246,0.3); }
         .primary-btn:hover { transform: translateY(-2px); background: var(--accent-glow); }
@@ -270,7 +268,6 @@
         .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
         .tech-stack span { background: rgba(59,130,246,0.12); padding: 0.2rem 0.8rem; border-radius: 30px; font-size: 0.7rem; color: var(--accent); }
 
-        /* CERTIFICATES enhanced grid + modal */
         .certificates-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); gap: 1.8rem; margin-top: 1rem; }
         .certificate-item { cursor: pointer; overflow: hidden; }
         .certificate-item:hover { transform: translateY(-5px); border-color: var(--accent); }
@@ -280,7 +277,6 @@
         .certificate-info h3 { font-size: 1.1rem; margin-bottom: 0.3rem; color: var(--accent); }
         .certificate-info p { font-size: 0.8rem; color: var(--secondary-text); }
 
-        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -293,10 +289,9 @@
             align-items: center;
             cursor: pointer;
         }
-        .modal-content { max-width: 90vw; max-height: 85vh; background: var(--card-color); border-radius: 28px; padding: 0.8rem; border: 1px solid var(--accent); box-shadow: 0 30px 50px rgba(0,0,0,0.5); }
+        .modal-content { max-width: 90vw; max-height: 85vh; background: var(--card-color); border-radius: 28px; padding: 0.8rem; border: 1px solid var(--accent); }
         .modal-content img { max-width: 100%; max-height: 75vh; border-radius: 20px; display: block; margin: auto; }
-        .close-modal { position: absolute; top: 20px; right: 30px; font-size: 2.2rem; color: white; background: rgba(0,0,0,0.5); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.2s; }
-        .close-modal:hover { background: var(--accent); }
+        .close-modal { position: absolute; top: 20px; right: 30px; font-size: 2.2rem; color: white; background: rgba(0,0,0,0.5); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; }
 
         .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1.5rem; }
         .contact-card { padding: 1.4rem; text-align: center; cursor: pointer; }
@@ -330,7 +325,6 @@
     </nav>
 </header>
 
-<!-- Mobile Drawer -->
 <div class="mobile-nav" id="mobileNav">
     <button class="close-mobile" id="closeMobileNav">✕</button>
     <a href="#home" data-mobile-nav>Home</a>
@@ -348,23 +342,22 @@
         <div class="hero-content">
             <p class="greeting">Hello, I'm</p>
             <h1>Ranjan S</h1>
-            <h2>MCA | Data Science Enthusiast | AI & ML Learner</h2>
-            <p class="hero-description">Passionate about Data Science, AI, ML, Deep Learning & Software Development. Solving real-world problems through data.</p>
+            <h2>MCA | Data Science Enthusiast | AI & Machine Learning Learner</h2>
+            <p class="hero-description">Passionate about Data Science, Artificial Intelligence, Machine Learning, Deep Learning and Software Development. Building skills and projects that solve real-world problems.</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn primary-btn">View Projects</a>
-                <!-- Resume dual function button: Download + View Modal -->
-                <button id="resumeActionBtn" class="btn secondary-btn">📄 Resume (Download / View)</button>
+                <button id="download-resume-btn" class="btn secondary-btn">📄 Download Resume</button>
             </div>
         </div>
         <div class="hero-image">
             <div class="profile-img-wrapper">
-                <img class="profile-img" id="profilePhoto" src="certificates/Ranjan.jpg" alt="Ranjan" onerror="this.src='https://placehold.co/400x400/1e293b/3b82f6?text=Ranjan'">
+                <img class="profile-img" id="profilePhoto" src="certificates/Ranjan.jpg" alt="Ranjan S Profile" onerror="this.src='https://placehold.co/400x400/1e293b/3b82f6?text=Ranjan+S'">
             </div>
         </div>
     </section>
 
     <section id="about" class="section"><div class="section-title">About Me</div>
-        <div class="about-container"><p>I’m Ranjan, currently pursuing MCA with a strong passion for Data Science, Machine Learning, and Artificial Intelligence. I love transforming raw data into actionable insights and building intelligent systems. Skilled in Python, SQL, analytics, and deep learning frameworks. Constantly learning and working on impactful projects.</p></div>
+        <div class="about-container"><p>I'm Ranjan S, currently pursuing MCA with a strong passion for Data Science, Machine Learning, and Artificial Intelligence. I love transforming raw data into actionable insights and building intelligent systems. Skilled in Python, SQL, analytics, and deep learning frameworks. Constantly learning and working on impactful projects.</p></div>
     </section>
 
     <section id="education" class="section"><div class="section-title">Education</div>
@@ -390,33 +383,35 @@
         </div>
     </section>
 
-    <!-- Certifications Section: Only Certificate details appear, each clickable modal -->
-    <section id="certifications" class="section"><div class="section-title">Certifications</div>
+    <section id="certifications" class="section">
+        <div class="section-title">Certifications</div>
         <div class="certificates-grid" id="certificatesGrid"></div>
     </section>
 
     <section id="contact" class="section"><div class="section-title">Contact Me</div>
         <div class="contact-container">
-            <div class="contact-card" data-contact="email"><h3>📧 Email</h3><p>ranjan.s@datascience.com</p><small>Click to copy / open mail</small></div>
-            <div class="contact-card" data-contact="phone"><h3>📱 Phone</h3><p>+91 98765 43210</p><small>Click to copy number</small></div>
-            <div class="contact-card" data-contact="linkedin"><h3>🔗 LinkedIn</h3><p>linkedin.com/in/ranjan-s</p><small>Click to open profile</small></div>
+            <div class="contact-card" data-contact="email"><h3>📧 Email</h3><p>ranjan.s@datascience.com</p><small>Click to copy</small></div>
+            <div class="contact-card" data-contact="phone"><h3>📱 Phone</h3><p>+91 98765 43210</p><small>Click to copy</small></div>
+            <div class="contact-card" data-contact="linkedin"><h3>🔗 LinkedIn</h3><p>linkedin.com/in/ranjan-s</p><small>Click to open</small></div>
             <div class="contact-card" data-contact="github"><h3>🐙 GitHub</h3><p>github.com/ranjan-s</p><small>Click to open</small></div>
         </div>
     </section>
 </main>
 <footer><p>© 2025 Ranjan S — Data Science Portfolio | Built with 💙</p></footer>
 
-<!-- Modal for certificates & resume view -->
-<div id="imageModal" class="modal"><div class="close-modal" id="closeModalBtn">✕</div><div class="modal-content" id="modalContent"><img id="modalImage" src="" alt="Full view"></div></div>
+<div id="imageModal" class="modal">
+    <div class="close-modal" id="closeModalBtn">✕</div>
+    <div class="modal-content"><img id="modalImage" src="" alt="Certificate Full View"></div>
+</div>
 
 <script>
-    // CERTIFICATE DATA (with details and local image paths - using placeholder images but linking details)
+    // YOUR ORIGINAL CERTIFICATE DATA - KEEPING EXACTLY AS YOU HAD
     const certificates = [
-        { title: "Google Data Analytics Professional", issuer: "Google | Coursera", imgSrc: "https://picsum.photos/id/20/400/300" },
-        { title: "Machine Learning Specialization", issuer: "Stanford | DeepLearning.AI", imgSrc: "https://picsum.photos/id/26/400/300" },
-        { title: "Python for Data Science", issuer: "IBM | Cognitive Class", imgSrc: "https://picsum.photos/id/0/400/300" },
-        { title: "TensorFlow Developer Certificate", issuer: "Google TensorFlow", imgSrc: "https://picsum.photos/id/1/400/300" },
-        { title: "SQL for Data Analysis", issuer: "UC Davis | Coursera", imgSrc: "https://picsum.photos/id/29/400/300" }
+        { title: "Google Data Analytics Professional", issuer: "Google | Coursera", imgSrc: "certificates/google-data-analytics.jpg" },
+        { title: "Machine Learning Specialization", issuer: "Stanford | DeepLearning.AI", imgSrc: "certificates/machine-learning-spec.jpg" },
+        { title: "Python for Data Science", issuer: "IBM | Cognitive Class", imgSrc: "certificates/python-data-science.jpg" },
+        { title: "TensorFlow Developer Certificate", issuer: "Google TensorFlow", imgSrc: "certificates/tensorflow.jpg" },
+        { title: "SQL for Data Analysis", issuer: "UC Davis | Coursera", imgSrc: "certificates/sql-analysis.jpg" }
     ];
 
     function renderCertificates() {
@@ -426,59 +421,37 @@
         certificates.forEach((cert, idx) => {
             const card = document.createElement('div');
             card.className = 'certificate-item';
-            card.setAttribute('data-cert-index', idx);
             card.innerHTML = `
                 <div class="certificate-img-container">
-                    <img class="certificate-img" src="${cert.imgSrc}" alt="${cert.title}" loading="lazy">
+                    <img class="certificate-img" src="${cert.imgSrc}" alt="${cert.title}" loading="lazy" onerror="this.src='https://placehold.co/400x300/1e293b/3b82f6?text=${encodeURIComponent(cert.title)}'">
                 </div>
                 <div class="certificate-info">
                     <h3>${cert.title}</h3>
                     <p>${cert.issuer}</p>
                 </div>
             `;
-            card.addEventListener('click', (e) => {
-                e.stopPropagation();
-                openModalWithImage(cert.imgSrc);
+            card.addEventListener('click', () => {
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('modalImage');
+                modalImg.src = cert.imgSrc;
+                modal.style.display = 'flex';
             });
             grid.appendChild(card);
         });
     }
 
-    function openModalWithImage(src) {
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        if(modal && modalImg) {
-            modalImg.src = src;
-            modal.style.display = 'flex';
-        }
-    }
-    function closeModal() { document.getElementById('imageModal').style.display = 'none'; }
-
-    // RESUME HANDLER: both download and view using a sample PDF (if you have actual file, replace)
-    // Dual: provide download and also view in modal (PDF preview via iframe or image)
-    // For simplicity: On click shows a small popup with options: Download or View inline (modal)
-    const resumeBtn = document.getElementById('resumeActionBtn');
-    if(resumeBtn) {
-        resumeBtn.addEventListener('click', (e) => {
+    // Resume download - ONLY download option as you requested
+    const downloadBtn = document.getElementById('download-resume-btn');
+    if(downloadBtn) {
+        downloadBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            // Provide user friendly choice: download or view
-            const userChoice = confirm("📄 Resume Options: \n• Click 'OK' to DOWNLOAD PDF \n• Click 'Cancel' to VIEW in modal (preview)");
-            if(userChoice) {
-                // DOWNLOAD
-                const link = document.createElement('a');
-                link.href = "certificates/Ranjan_Resume.pdf";  // Replace with actual resume path
-                link.download = "Ranjan_Resume.pdf";
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                showToast("Download started...");
-            } else {
-                // VIEW modal: resume preview as image or PDF embed
-                // If we have an image preview or PDF data url. For demo use placeholder
-                const resumePreviewUrl = "https://picsum.photos/id/42/800/1000"; // placeholder - replace with actual resume image/pdf embed
-                openModalWithImage(resumePreviewUrl);
-                showToast("Resume preview (replace with actual file)");
-            }
+            const link = document.createElement('a');
+            link.href = "certificates/Ranjan_Resume.pdf";
+            link.download = "Ranjan_Resume.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            showToast("Downloading Resume...");
         });
     }
 
@@ -490,7 +463,7 @@
         setTimeout(() => toast.remove(), 2000);
     }
 
-    // Contact actions: copy/open apps
+    // Contact actions
     document.querySelectorAll('.contact-card').forEach(card => {
         card.addEventListener('click', (e) => {
             const type = card.getAttribute('data-contact');
@@ -516,7 +489,7 @@
         themeToggle.innerText = isLight ? '☀️' : '🌙';
     });
 
-    // Mobile nav menu toggle
+    // Mobile navigation
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const mobileNav = document.getElementById('mobileNav');
     const overlayDiv = document.getElementById('overlay');
@@ -528,9 +501,16 @@
     closeMobile.addEventListener('click', closeMobileNavFunc);
     overlayDiv.addEventListener('click', closeMobileNavFunc);
     document.querySelectorAll('[data-mobile-nav]').forEach(link => {
-        link.addEventListener('click', (e) => { closeMobileNavFunc(); const targetId = link.getAttribute('href'); if(targetId && targetId !== '#') { document.querySelector(targetId)?.scrollIntoView({ behavior: 'smooth' }); } });
+        link.addEventListener('click', (e) => { 
+            closeMobileNavFunc(); 
+            const targetId = link.getAttribute('href'); 
+            if(targetId && targetId !== '#') { 
+                document.querySelector(targetId)?.scrollIntoView({ behavior: 'smooth' }); 
+            } 
+        });
     });
-    // desktop active nav highlight
+
+    // Active nav highlight
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('[data-nav]');
     function updateActiveNav() {
@@ -542,22 +522,18 @@
     window.addEventListener('scroll', updateActiveNav);
     window.addEventListener('load', updateActiveNav);
     
-    // Reveal on scroll
-    const revealElements = document.querySelectorAll('.reveal');
+    // Reveal animations
     const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); }); }, { threshold: 0.1 });
     document.querySelectorAll('.about-container, .education-card, .skill-card, .project-card, .certificate-item, .contact-card').forEach(el => { el.classList.add('reveal'); revealObserver.observe(el); });
+    
     renderCertificates();
 
-    // modal close events
+    // Modal close
     const modal = document.getElementById('imageModal');
     const closeModalBtn = document.getElementById('closeModalBtn');
-    closeModalBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
-    window.addEventListener('keydown', (e) => { if(e.key === 'Escape' && modal.style.display === 'flex') closeModal(); });
-    
-    // additionally, if profile image error handling, keep dynamic
-    const profileImg = document.getElementById('profilePhoto');
-    if(profileImg && profileImg.complete && profileImg.naturalWidth === 0) profileImg.src = 'https://placehold.co/400x400/1e293b/3b82f6?text=Ranjan';
+    closeModalBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+    modal.addEventListener('click', (e) => { if(e.target === modal) modal.style.display = 'none'; });
+    window.addEventListener('keydown', (e) => { if(e.key === 'Escape' && modal.style.display === 'flex') modal.style.display = 'none'; });
 </script>
 </body>
 </html>
